@@ -6,7 +6,7 @@ import csv
 
 def save_data_to_csv(data, filename):
   with open(filename, "w", newline="") as csvfile:
-    fieldnames = ["releaseDate", "stockDirection"]
+    fieldnames = []
     if data and data[0]:
       fieldnames += list(data[0].keys())  
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
@@ -15,7 +15,7 @@ def save_data_to_csv(data, filename):
 
 
   with open(filename, "w", newline="") as csvfile:
-    fieldnames = ["releaseDate", "stockDirection"]
+    fieldnames = []
     if data and data[0]:
       fieldnames += list(data[0].keys())  
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
