@@ -3,8 +3,7 @@ import requests
 
 class GetFocusPdfLinks:
     def get_data(self) -> list:
-        url = 'https://www.bcb.gov.br/api/servico/sitebcb/focus/ultimas?quantidade=10&filtro='
-        # url = 'https://www.bcb.gov.br/api/servico/sitebcb/focus/ultimas?quantidade=1000&filtro='
+        url = 'https://www.bcb.gov.br/api/servico/sitebcb/focus/ultimas?quantidade=1000&filtro='
         response = requests.get(url)
         data = response.json()
         data = data['conteudo']
